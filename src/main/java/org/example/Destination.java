@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.exceptions.InsufficientFundsException;
+
 public class Destination {
 
     private String name;
@@ -14,39 +16,44 @@ public class Destination {
         this.requireCovidTest = requireCovidTest;
     }
 
-    public void allowToVisit(Traveler traveler) {
+    public void allowToVisit(Traveler traveler) throws InsufficientFundsException {
+        Double costToTravel = distance * costPerMile;
+        if (traveler.getMoney() < costToTravel) {
+            System.out.println(costToTravel);
+            throw new InsufficientFundsException();
+        }
+        }
 
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name){
+            this.name = name;
+        }
+
+        public Double getDistance() {
+            return distance;
+        }
+
+        public void setDistance(Double distance){
+            this.distance = distance;
+        }
+
+        public Double getCostPerMile() {
+            return costPerMile;
+        }
+
+        public void setCostPerMile(Double costPerMile){
+            this.costPerMile = costPerMile;
+        }
+
+        public Boolean getRequireCovidTest() {
+            return requireCovidTest;
+        }
+
+        public void setRequireCovidTest(Boolean requireCovidTest){
+            this.requireCovidTest = requireCovidTest;
+        }
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Double getDistance() {
-        return distance;
-    }
-
-    public void setDistance(Double distance) {
-        this.distance = distance;
-    }
-
-    public Double getCostPerMile() {
-        return costPerMile;
-    }
-
-    public void setCostPerMile(Double costPerMile) {
-        this.costPerMile = costPerMile;
-    }
-
-    public Boolean getRequireCovidTest() {
-        return requireCovidTest;
-    }
-
-    public void setRequireCovidTest(Boolean requireCovidTest) {
-        this.requireCovidTest = requireCovidTest;
-    }
-}
