@@ -13,7 +13,6 @@ public class CovidResults {
     }
 
     public Date getDate() {
-
         return null;
     }
 

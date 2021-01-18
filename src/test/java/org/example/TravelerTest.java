@@ -20,7 +20,7 @@ public class TravelerTest {
         Double money = 40.00;
         List<Destination> placesVisited = new ArrayList<>();
         placesVisited.add(new Destination("Florida", 1000.0, 0.13, false));
-        boolean noFlyList = false;
+        Boolean noFlyList = false;
         CovidResults covidResults = new CovidResults(new Date(), false);
 
         traveler = new Traveler(name, passPortNo, money, placesVisited, noFlyList, covidResults);

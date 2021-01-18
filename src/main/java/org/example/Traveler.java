@@ -12,13 +12,18 @@ public class Traveler {
     private Boolean noFlyList;
     private CovidResults covidResults;
 
-    public Traveler(String name, String passPortNo, Double money, List<Destination> placesVisited, boolean noFlyList, CovidResults covidResults) {
+    public Traveler(String name, String passPortNo, Double money, List<Destination> placesVisited,
+                    Boolean noFlyList, CovidResults covidResults) {
         this.name = name;
         this.passPortNo = passPortNo;
         this.money = money;
         this.placesVisited = placesVisited;
         this.noFlyList = noFlyList;
         this.covidResults = covidResults;
+    }
+
+    public void bookATrip(Destination destination) {
+
     }
 
     public String getName() {
@@ -69,7 +74,4 @@ public class Traveler {
         this.covidResults = covidResults;
     }
 
-    public void bookATrip(Destination destination) {
-
-    }
 }

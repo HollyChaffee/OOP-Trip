@@ -18,11 +18,12 @@ public class Destination {
 
     public void allowToVisit(Traveler traveler) throws InsufficientFundsException {
         Double costToTravel = distance * costPerMile;
-        if (traveler.getMoney() < costToTravel) {
-            System.out.println(costToTravel);
+        Double moneyTravelerHas = traveler.getMoney();
+        if (moneyTravelerHas < costToTravel) {
             throw new InsufficientFundsException();
+
         }
-        }
+    }
 
         public String getName() {
             return name;
